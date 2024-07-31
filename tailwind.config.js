@@ -10,13 +10,17 @@ module.exports = {
       colors: {
         primary: "#1c4456",
         textheaderHover:"#417086",
-        secodary:"#417086"
+        secodary:"#417086",
+        white_hsla: 'hsla(0,0%,100%,0.5)',
         
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      backdropBlur: {
+        70: '70px',
       },
     },
   },
