@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ;
+}
+.custom-shadowHeader{
+  box-shadow:0 9px 20px rgba(28,68,86,.2);
+}
