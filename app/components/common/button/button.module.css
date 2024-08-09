@@ -19,7 +19,7 @@
 
 .button:hover:after {
   transform: scaleX(1);
-  transform-origin: left;
+  transform-origin: 0% 100%;
 }
 .button:after {
   content: "";
@@ -31,7 +31,7 @@
   background-color: #417086;
   z-index: -1;
   transform: scaleX(0);
-  transform-origin: right;
+  transform-origin: 100% 0%;
   transition: transform 0.3s ease-in-out;
 
 }

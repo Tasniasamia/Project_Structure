@@ -158,7 +158,7 @@ const Header = () => {
             <CiSearch className="text-[20px] text-primary" />
             <span className="text-primary font-bold text-[18px]">Search</span>
           </div>
-          <Button href={"/login"}>Login</Button>
+          <Button href={"/login"}>Log In</Button>
         </div>
       </div>
     </div>
