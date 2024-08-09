@@ -12,7 +12,7 @@ const Header = () => {
 const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="navbar-sticky-nav">
+    <div className="navbar-sticky-nav top-0 sticky">
       <div className="container h-[77px] flex justify-between items-center text-primary">
         <div className="flex items-center gap-x-10">
           <Link href="/">

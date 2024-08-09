@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         primary: "#1c4456",
         textheaderHover:"#417086",
-        secodary:"#417086",
+        secondary:"#417086",
         white_hsla: 'hsla(0,0%,100%,0.5)',
         
       },
