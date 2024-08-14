@@ -48,8 +48,8 @@ const Banner = () => {
             Rent
           </button>
         </div>
-        <div className="bg-white rounded-lg p-[24px] mt-2 w-fit flex flex-wrap gap-2 items-center">
-          <div className="flex gap-1 items-center w-fit">
+        <div className="bg-white rounded-lg p-[24px] mt-2 md:w-fit w-full flex flex-wrap gap-2 items-center">
+          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full">
             <MdCategory className="text-primary text-base" />
             <Select
               variant="borderless"
@@ -64,7 +64,7 @@ const Banner = () => {
               ]}
             />
           </div>
-          <div className="flex gap-1 items-center w-fit">
+          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full">
             <MdLocationOn className="text-primary text-base" />
             <Select
               variant="borderless"
@@ -79,7 +79,7 @@ const Banner = () => {
               ]}
             />
           </div>
-          <div className="flex gap-1 items-center w-fit">
+          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full">
             <IoIosHome className="text-primary text-base" />
             <Select
               variant="borderless"
@@ -94,7 +94,7 @@ const Banner = () => {
               ]}
             />
           </div>
-          <div className="bg-primary px-[16px] py-[16px] font-bold text-white rounded-lg cursor-pointer">
+          <div className="bg-primary md:w-fit w-full md:block flex items-center justify-center px-[16px] py-[16px] font-bold text-white rounded-lg cursor-pointer">
             <FaSearch/>
           </div>
         </div>
