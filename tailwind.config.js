@@ -12,6 +12,9 @@ module.exports = {
         textheaderHover:"#417086",
         secondary:"#417086",
         white_hsla: 'hsla(0,0%,100%,0.5)',
+        primary1:"#FF6400",
+        secondary1:"#003049",
+        textdark:"#313234"
         
       },
       backgroundImage: {
@@ -25,5 +28,6 @@ module.exports = {
     },
   },
   plugins: [],
-  darkMode: 'selector',
+  darkMode: ['selector', '[data-theme="dark"]'],
+  // prefix: 'tw-',
 };

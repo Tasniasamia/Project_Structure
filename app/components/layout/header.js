@@ -8,28 +8,25 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-const Header = () => {
+const Header = ({ theme1 }) => {
   const [toggle, setToggle] = useState(false);
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     if (theme === "dark") {
-      document.querySelector("html").setAttribute("class", "dark");
+      document.querySelector("html").setAttribute("data-theme", "dark");
     } else {
-      document.querySelector("html").setAttribute("class", "light");
+      document.querySelector("html").setAttribute("data-theme", "light");
     }
   }, [theme]);
 
-  // const handleTheme = () => {
-  //   document.querySelector("html").setAttribute("class","dark");
-  // };
-  // const handleTheme2 = () => {
-  //   document.querySelector("html").setAttribute("class","light");
-  // };
-
   return (
     <div className="navbar-sticky-nav top-0 sticky">
-      <div className="container h-[77px] flex justify-between items-center text-primary">
+      <div
+        className={`container h-[77px] flex justify-between items-center 
+        ${ theme1 ? "dark:bg-black  bg-white" : "bg-white text-primary"} 
+        transition-all duration-300`}
+      >
         <div className="flex items-center gap-x-10">
           <Link href="/">
             <img
@@ -167,14 +164,14 @@ const Header = () => {
                           wrapperClassName={"md:block hidden"}
                           onClick={() => setTheme("light")}
                         >
-                          light
+                          Light
                         </Button>
                       ) : (
                         <Button
                           wrapperClassName={"md:block hidden"}
                           onClick={() => setTheme("dark")}
                         >
-                          dark
+                          Dark
                         </Button>
                       )}
                     </div>
@@ -255,117 +252,123 @@ const Header = () => {
                 <Link href="/about">Listenings</Link>
               </li>
               <li>
-                <div className="flex flex-col">
-                  <Dropdown
-                    overlay={
-                      <div className="bg-white ps-[8px] pe-[20px] pb-[20px] pt-[16px] text-textprimary flex flex-col gap-y-[16px] custom-shadowHeader rounded-[10px]">
-                        <Link
-                          href="/agent-list"
-                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                        >
-                          Agent List
-                        </Link>
-                        <Link
-                          href="/agent-profile"
-                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                        >
-                          Agents Profile
-                        </Link>
-                      </div>
-                    }
-                  >
-                    <div className="flex items-center gap-2">
-                      <span>Agents</span>
-                      <IoIosArrowDown />
+                <Dropdown
+                  overlay={
+                    <div className="bg-white ps-[8px] pe-[20px] pb-[20px] pt-[16px] text-textprimary flex flex-col gap-y-[16px] custom-shadowHeader rounded-[10px]">
+                      <Link
+                        href="/agent-list"
+                        className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                      >
+                        Agent List
+                      </Link>
+                      <Link
+                        href="/agent-profile"
+                        className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                      >
+                        Agents Profile
+                      </Link>
                     </div>
-                  </Dropdown>
-                </div>
+                  }
+                >
+                  <div className="flex items-center gap-2">
+                    <span>Agents</span>
+                    <IoIosArrowDown />
+                  </div>
+                </Dropdown>
               </li>
               <li>
-                <div>
-                  <Dropdown
-                    overlay={
-                      <div className="bg-white ps-[16px] pe-[20px] pb-[20px] pt-[16px] text-textprimary flex gap-x-[20px] w-full items-center custom-shadowHeader rounded-[10px]  text-[16px]  ">
-                        <div className="flex flex-col gap-y-[16px]">
-                          <Link
-                            href="/blog"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Blog
-                          </Link>
-                          <Link
-                            href="/blog-singel"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Blog Single
-                          </Link>
-                          <Link
-                            href="/contact"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Contact
-                          </Link>
-                          <Link
-                            href="/privacy-policy"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Privacy Policy
-                          </Link>
-                          <Link
-                            href="/license"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            License
-                          </Link>
-                        </div>
-                        <div className="flex flex-col gap-y-[16px]">
-                          <Link
-                            href="/login"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Log In
-                          </Link>
-                          <Link
-                            href="/otp"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Enter OTP
-                          </Link>
-                          <Link
-                            href="/new-password"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            New Password
-                          </Link>
-                          <Link
-                            href="/reset-password"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Reset Password
-                          </Link>
-                          <Link
-                            href="/create-account"
-                            className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
-                          >
-                            Create Account
-                          </Link>
-                        </div>
+                <Dropdown
+                  overlay={
+                    <div className="bg-white ps-[16px] pe-[20px] pb-[20px] pt-[16px] text-textprimary flex justify-between items-center custom-shadowHeader rounded-[10px] md:w-[300px] w-full text-[16px]">
+                      <div className="flex flex-col gap-y-[16px]">
+                        <Link
+                          href="/blog"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Blog
+                        </Link>
+                        <Link
+                          href="/blog-singel"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Blog Single
+                        </Link>
+                        <Link
+                          href="/contact"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Contact
+                        </Link>
+                        <Link
+                          href="/privacy-policy"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Privacy Policy
+                        </Link>
+                        <Link
+                          href="/license"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          License
+                        </Link>
                       </div>
-                    }
-                  >
-                    <div className="flex items-center gap-2">
-                      <span>Other Pages</span>
-                      <IoIosArrowDown />
+                      <div className="flex flex-col gap-y-[16px]">
+                        <Link
+                          href="/login"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Log In
+                        </Link>
+                        <Link
+                          href="/otp"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Enter OTP
+                        </Link>
+                        <Link
+                          href="/new-password"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          New Password
+                        </Link>
+                        <Link
+                          href="/reset-password"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Reset Password
+                        </Link>
+                        <Link
+                          href="/create-account"
+                          className="font-semibold hover:text-textheaderHover duration-300 transition-colors ease-in-out"
+                        >
+                          Create Account
+                        </Link>
+                        {theme === "dark" ? (
+                          <Button
+                            wrapperClassName={"md:block hidden"}
+                            onClick={() => setTheme("light")}
+                          >
+                            Light
+                          </Button>
+                        ) : (
+                          <Button
+                            wrapperClassName={"md:block hidden"}
+                            onClick={() => setTheme("dark")}
+                          >
+                            Dark
+                          </Button>
+                        )}
+                      </div>
                     </div>
-                  </Dropdown>
-                </div>
+                  }
+                >
+                  <div className="flex items-center gap-2">
+                    <span>Other Pages</span>
+                    <IoIosArrowDown />
+                  </div>
+                </Dropdown>
               </li>
             </ul>
-          </div>
-          <div className="flex justify-center ">
-            <Button href={"/login"} className={"my-5"}>
-              Log In
-            </Button>
           </div>
         </div>
       )}
