@@ -5,11 +5,27 @@ import { IoIosArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import Button from "../common/button/button";
 import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 const Header = () => {
-const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").setAttribute("class", "dark");
+    } else {
+      document.querySelector("html").setAttribute("class", "light");
+    }
+  }, [theme]);
+
+  // const handleTheme = () => {
+  //   document.querySelector("html").setAttribute("class","dark");
+  // };
+  // const handleTheme2 = () => {
+  //   document.querySelector("html").setAttribute("class","light");
+  // };
 
   return (
     <div className="navbar-sticky-nav top-0 sticky">
@@ -146,6 +162,21 @@ const [toggle, setToggle] = useState(false);
                       >
                         Create Account
                       </Link>
+                      {theme === "dark" ? (
+                        <Button
+                          wrapperClassName={"md:block hidden"}
+                          onClick={() => setTheme("light")}
+                        >
+                          light
+                        </Button>
+                      ) : (
+                        <Button
+                          wrapperClassName={"md:block hidden"}
+                          onClick={() => setTheme("dark")}
+                        >
+                          dark
+                        </Button>
+                      )}
                     </div>
                   </div>
                 }

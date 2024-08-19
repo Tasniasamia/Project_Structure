@@ -9,7 +9,7 @@ import { FaSearch } from "react-icons/fa";
 const Banner = () => {
   const [tab, setTab] = useState("buy");
   return (
-    <div className="relative bg-[#c7e6f4] md:h-[800px] ">
+    <div className="relative dark:bg-black bg-[#c7e6f4] md:h-[800px] ">
       <div className=" container relative z-20 flex flex-col justify-center md:py-[210px] py-[60px]">
         {/* hero content */}
         <div className="sm:w-[605px] w-full">
@@ -49,7 +49,7 @@ const Banner = () => {
           </button>
         </div>
         <div className="bg-white rounded-lg p-[24px] mt-2 md:w-fit w-full flex flex-wrap gap-2 items-center">
-          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full">
+          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full py-4 md:border-r ">
             <MdCategory className="text-primary text-base" />
             <Select
               variant="borderless"
@@ -64,7 +64,7 @@ const Banner = () => {
               ]}
             />
           </div>
-          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full">
+          <div className="flex md:gap-1 flex-1 items-center  md:w-fit w-full py-4 md:border-r ">
             <MdLocationOn className="text-primary text-base" />
             <Select
               variant="borderless"
