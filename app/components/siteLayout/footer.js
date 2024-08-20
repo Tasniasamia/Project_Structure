@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
 import { LuChevronRight } from "react-icons/lu";
-import { FaLinkedinIn,FaFacebookF} from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { TbBrandTwitterFilled } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <div className="bg-secondary1">
+    <div className="bg-secondary1 relative">
+      <img src="/footer-svg.png" alt="footer-bg" className="absolute top-[249px] right-[79.17px] 2xl:block hidden 2xl:w-[118.11px] object-fill 2xl:h-[106px] w-[80px] h-[70px] " />
       <div className="container">
         <div className="pt-[96px] flex md:flex-row flex-col justify-between gap-2">
           <div>
@@ -71,7 +72,7 @@ const Footer = () => {
               href="/privacy"
               className="text-footertextColor hover:text-primary1 duration-300 transition-colors"
             >
-             Privacy
+              Privacy
             </Link>
           </div>
           <div className="flex flex-wrap gap-[13px] items-center">
@@ -89,7 +90,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className="pt-[32px] pb-[67.33px] text-borderColor text-center">Copyright ©_2023 Homestic</p>
+        <p className="pt-[32px] pb-[67.33px] text-borderColor text-center">
+          Copyright ©_2023 Homestic
+        </p>
       </div>
     </div>
   );

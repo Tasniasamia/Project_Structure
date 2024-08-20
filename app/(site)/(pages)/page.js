@@ -6,7 +6,6 @@ const page = () => {
     return (
         <div>
             <Banner/>
-            {/* <div className="tw-text-red">Data</div> */}
         </div>
     );
 };
