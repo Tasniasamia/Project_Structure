@@ -9,7 +9,7 @@ import { FaSearch } from "react-icons/fa";
 const Banner = () => {
   const [tab, setTab] = useState("buy");
   return (
-    <div className="relative dark:bg-black bg-[#c7e6f4] md:h-[800px] ">
+    <div className="relative dark:bg-black bg-[#c7e6f4] md:h-[800px] lg:mt-[-135px] mt-[-110px] top-0">
       <div className=" container relative z-20 flex flex-col justify-center md:py-[210px] py-[60px]">
         {/* hero content */}
         <div className="sm:w-[605px] w-full">
