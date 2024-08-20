@@ -7,39 +7,16 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidBadgeDollar } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
+import Image from "next/image";
 
-const Hero = ({ home3, home2 }) => {
+const Hero = () => {
   const [tab, setTab] = useState("all");
+
   return (
-    <div
-      className={`flex lg:mt-[-135px] mt-[-110px] top-0 relative home2-search bg-secondary1 ${
-        home3 ? "h-[900px] flex flex-row-reverse items-end justify-between  " : "md:h-[965px] h-[990px] "
-      }`}
-    >
-      <img src="/hero-svg.png"alt="hero-svg"className={`absolute ${home3?"w-[70.96px] h-[63.69px] left-[73px] bottom-[101.11px] ":"w-[61.87px] h-[61.87px] left-[70.14px] bottom-[125.11px]"} object-fill`}/>
-      {home2 && <div className="md:basis-1/2 basis-full bg-secondary1"></div>}
-      {
-        home2 ? (<div className="md:basis-1/2 basis-full md:block hidden order-1">
-            <img
-              src="/hero1.png"
-              alt="hero"
-              className="w-full h-full object-fill"
-            />
-          </div>) : <div className="md:basis-1/2 basis-full   md:block hidden  bg-secondary1  ">
-          <div className="h-[715px] z-0">
-          <img
-          src="/video2.png"
-          alt="hero"
-          className="h-full "
-        />
-          </div>
-    
-      </div>
-      }
-      
-      <div className={`container xl:px-0  absolute h-full flex flex-col ${home3?"pt-[165px]":"pt-[136px]"}  right-1/2 translate-x-1/2 basis-1/2 justify-center `}>
-        <div className=" ">
-          <h1 className="header-1 text-white md:w-[586px] w-full">
+    <div className="bg-secondary1 mt-[-134px]   home2-search">
+      <div className="h-full   flex justify-between ">
+        <div className="basis-1/2 lg:px-0 container left-1/2 -translate-x-1/2 absolute h-full flex flex-col ">
+          <h1 className="header-1 text-white md:w-[586px] w-full md:mt-[270px] mt-[200px] ">
             Find Your Dream Home Now
           </h1>
           <p className="ps-[20px] border-l-[4px] text-footertextColor mt-[32px] mb-[42px] border-primary1 md:w-[559px] w-full">
@@ -48,7 +25,7 @@ const Hero = ({ home3, home2 }) => {
             ever since.
           </p>
           <div className="flex gap-10 items-center">
-            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape ">
+            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape">
               Find Property
             </button>
             <img
@@ -71,7 +48,7 @@ const Hero = ({ home3, home2 }) => {
               All
             </p>
             <p
-              className={`header-5 cursor-pointer  ${
+              className={`header-5 cursor-pointer ${
                 tab === "sale"
                   ? "text-primary1 underline"
                   : "text-footertextColor"
@@ -81,7 +58,7 @@ const Hero = ({ home3, home2 }) => {
               Sale
             </p>
             <p
-              className={`header-5 cursor-pointer  ${
+              className={`header-5 cursor-pointer ${
                 tab === "rent"
                   ? "text-primary1 underline"
                   : "text-footertextColor"
@@ -90,10 +67,9 @@ const Hero = ({ home3, home2 }) => {
             >
               Rent
             </p>
-          </div>
+          </div> 
           {/* tab content */}
-          <div className="bg-[#f80b0b66] bg-opacity-100 z-50">
-          <Form className="flex flex-wrap md:gap-10 gap-3 items-center sm:mt-[80px] mt-[40px] mb-[32px] px-[24px] py-[26px] rounded-[8px] w-fit">
+          <Form className=" bg-blurColor  flex flex-wrap md:gap-10 gap-3 items-center  mb-[32px] px-[24px] py-[26px] rounded-[8px] w-fit">
             <div className="flex  items-center gap-[12px] pe-[24.27px] border-r border-r-borderColor2">
               <BiSolidHomeCircle className="text-white text-[18px]" />
               <Select
@@ -144,11 +120,26 @@ const Hero = ({ home3, home2 }) => {
             </div>
             </div>
           </Form>
-          </div>
-          
+        </div> 
+       
+        <div className="basis-1/2"></div>
+        <div className="basis-1/2  mt-[191px]">
+          <div className="md:max-w-[958px] h-[715px] sm:block hidden">
+           <Image
+              src="/video2.png"
+              alt="video"
+              layout="responsive"
+              width={958}
+              height={715}
+              className="w-full h-full"
+            />
+            </div>
         </div>
-      </div>
-    </div>
+       
+         
+          </div>
+          </div>
+     
   );
 };
 

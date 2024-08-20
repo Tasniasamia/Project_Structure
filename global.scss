@@ -19,6 +19,14 @@
   line-height: 76.8px;
   text-align: left;
 }  
+.header-2{
+  //styleName: H2/120.00000476837158/Heading_02;
+font-family: Libre Baskerville;
+font-size: 48px;
+font-weight: 700;
+line-height: 57.6px;
+
+}
 .header-5{
 font-family: Libre Baskerville;
 font-size: 24px;
@@ -27,6 +35,22 @@ line-height: 31.2px;
 text-align: left;
 
 }
+.home2-search{
+  height:965px!important;
+}
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .home2-search {
+    height: 800px !important;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .home2-search {
+    height: 1050px !important;
+
+  }}
+
+
 .home2-search{
   .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
     padding-inline-end: 18px;
@@ -55,6 +79,12 @@ font-size: 16px;
 font-weight: 400;
 line-height: 24px;
 
+}
+.bg-blurColor{
+  border-radius: 8px;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(217, 217, 217, 0.10) 100%);
+box-shadow: 0px 4px 25px -1px rgba(0, 0, 0, 0.20);
+backdrop-filter: blur(25px);
 }
 
 //footer
