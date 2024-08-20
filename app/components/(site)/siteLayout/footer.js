@@ -7,7 +7,7 @@ import { TbBrandTwitterFilled } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <div className="bg-secondary1 relative">
+    <div className="bg-secondary1 relative mt-2">
       <img src="/footer-svg.png" alt="footer-bg" className="absolute top-[249px] right-[79.17px] 2xl:block hidden 2xl:w-[118.11px] object-fill 2xl:h-[106px] w-[80px] h-[70px] " />
       <div className="container">
         <div className="pt-[96px] flex md:flex-row flex-col justify-between gap-2">

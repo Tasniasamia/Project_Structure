@@ -16,7 +16,8 @@ module.exports = {
         secondary1:"#003049",
         textdark:"#313234",
         borderColor:"#888AA0",
-        footertextColor:"#EAEEF9"
+        footertextColor:"#EAEEF9",
+        borderColor2:"#CED7E2"
 
 
         
