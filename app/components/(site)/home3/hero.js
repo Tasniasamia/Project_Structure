@@ -25,7 +25,7 @@ const Hero = () => {
             ever since.
           </p>
           <div className="flex gap-10 items-center">
-            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape">
+            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape rounded-[10px]">
               Find Property
             </button>
             <img

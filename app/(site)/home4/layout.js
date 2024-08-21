@@ -1,7 +1,7 @@
 "use client";
 
-import Footer from "../../../components/(site)/siteLayout/footer";
-import Header from "../../../components/layout/header";
+import Footer from "../../components/(site)/siteLayout/footer";
+import Header from "../../components/(site)/siteLayout/header";
 
 
 export default function Layout({ children }) {

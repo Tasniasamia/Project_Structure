@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "../../../components/(site)/home4/hero";
+import Hero from "../../components/(site)/home4/hero";
 
 const page = () => {
     return (

@@ -48,7 +48,7 @@ const Hero = ({ home3, home2 }) => {
             ever since.
           </p>
           <div className="flex gap-10 items-center">
-            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape ">
+            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape rounded-[10px]">
               Find Property
             </button>
             <img
@@ -92,8 +92,8 @@ const Hero = ({ home3, home2 }) => {
             </p>
           </div>
           {/* tab content */}
-          <div className="bg-[#f80b0b66] bg-opacity-100 z-50">
-          <Form className="flex flex-wrap md:gap-10 gap-3 items-center sm:mt-[80px] mt-[40px] mb-[32px] px-[24px] py-[26px] rounded-[8px] w-fit">
+          <div className="">
+          <Form className="bg-blurColor flex flex-wrap md:gap-10 gap-3 items-center sm:mt-[80px] mt-[40px] mb-[32px] px-[24px] py-[26px] rounded-[8px] w-fit">
             <div className="flex  items-center gap-[12px] pe-[24.27px] border-r border-r-borderColor2">
               <BiSolidHomeCircle className="text-white text-[18px]" />
               <Select
