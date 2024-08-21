@@ -140,7 +140,7 @@ const Header = () => {
             <Dropdown
               overlay={menu2}
               trigger={["hover"]}
-              className="lg:flex hidden"
+              className="lg:flex hidden "
             >
               <div className="flex items-center text-textdark cursor-pointer group">
                 <span className="paragraph-6  group-hover:text-primary1 duration-150 transition-colors">
@@ -152,7 +152,7 @@ const Header = () => {
           </div>
         </div>
         {toggle && (
-          <div className=" top-[77px] lg:hidden flex flex-col gap-6 absolute  z-40 h-auto left-0 bg-[#ebedf9] pt-2 w-full container ">
+          <div className=" top-[77px] lg:hidden flex flex-col gap-6 absolute  z-40 h-auto left-0 bg-[#ebedf9] pt-2 w-full container rounded-b-[10px]">
             <Dropdown overlay={menu} trigger={["hover"]} className="">
               <div className="flex items-center  text-textdark group">
                 <span className="paragraph-6  group-hover:text-primary1 duration-150 transition-colors">
