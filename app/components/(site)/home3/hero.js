@@ -8,6 +8,7 @@ import { BiSolidBadgeDollar } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import Image from "next/image";
+import Btn from "../../common/button/btn";
 
 const Hero = () => {
   const [tab, setTab] = useState("all");
@@ -25,10 +26,8 @@ const Hero = () => {
             ever since.
           </p>
           <div className="flex gap-10 items-center">
-            <button className="px-[27px] py-[17px] bg-primary1 text-white cursor-pointer primary-btn-shape rounded-[10px]">
-              Find Property
-            </button>
-            <img
+          <Btn>Find Property</Btn>
+           <img
               src="/play.png"
               className="w-[63px] h-[63px] object-fill cursor-pointer"
               alt="play"
@@ -134,11 +133,9 @@ const Hero = () => {
               className="w-full h-full"
             />
             </div>
-        </div>
-       
-         
-          </div>
-          </div>
+            </div>
+            </div>
+            </div>
      
   );
 };
