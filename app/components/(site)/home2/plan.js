@@ -11,15 +11,9 @@ const Plan = ({home3,home2,about}) => {
     <img src="/element.png" alt="svg" className={` absolute  top-[71px] right-[70.51px]`}/>
     <img src="/group2.png"alt="svg" className="absolute bottom-[78.39px] right-[42.58px]"/>
     <div className="py-[150px] container flex lg:flex-row flex-col justify-between gap-[120px] ">
-      {/* <div className="md:basis-1/2 basis-full">
+      <div className="md:basis-1/2 basis-full">
         <Image src="/plan.png" width={560} height={490} alt="plan" className="w-full"/>
-      </div> */}
-      <img
-        src="/plan.png"
-        className="w-auto sm:h-[490px] h-auto object-fill relative z-10"
-        alt="plan"
-      />
-      
+      </div>
       <div className="md:basis-1/2 basis-full relative">
         <img src="/group.png"alt="group"className="absolute top-[-26px] -translate-x-1/2 left-1/2"/>
         <h2 className="header-2 mb-[32px] text-[#313234]">

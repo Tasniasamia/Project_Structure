@@ -18,7 +18,11 @@ module.exports = {
         borderColor:"#888AA0",
         footertextColor:"#EAEEF9",
         borderColor2:"#CED7E2",
-        strokeColor:"#DD8E38"
+        strokeColor:"#DD8E38",
+        mainbg:"#222224",
+        mainbg1:"#353638",
+        textyellow:"#DD8E38"
+
 
 
         
