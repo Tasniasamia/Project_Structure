@@ -25,9 +25,10 @@ const Property = ({ theme1 }) => {
   const slideRef = useRef();
 
   const handleSlideChange = (swiper) => {
-    setCurrentSlide(swiper.activeIndex);
+    setCurrentSlide(swiper.snapIndex);
+    console.log(swiper);
     console.log(currentSlide);
-    // You can now access the current slide index with `swiper.activeIndex`
+    // You can now access the current slide index with `swiper.activeIndex `
   };
 
   return (
@@ -51,7 +52,9 @@ const Property = ({ theme1 }) => {
           />
         </div>
       </div>
-      {/* Slider */}
+      {/* Slider  
+isEnd
+:*/}
       <Swiper
         navigation={{
           nextEl: ".slide2",
@@ -104,13 +107,13 @@ const Property = ({ theme1 }) => {
                 </div>
               </div>
             </div>
-            <div className="lg:basis-1/2 basis-full mt-[48px] relative property">
+            <div className="lg:basis-1/2 basis-full mt-[48px] relative property bg-white ">
               <Image
                 src="/property.png"
                 alt="property"
                 width={979}
                 height={560}
-                className="lg:h-[560px] h-auto w-full"
+                className="lg:h-[560px] h-auto w-full border border-white"
               />
               <div className="lg:pt-[22px] pt-[10px] lg:pb-[28px] pb-[10px] lg:pe-[61px] pe-[10px] lg:ps-0 ps-[4px] absolute bottom-0 left-0 bg-white">
                 <h6 className="header-6 text-borderColor">Price</h6>
@@ -168,13 +171,13 @@ const Property = ({ theme1 }) => {
                 </div>
               </div>
             </div>
-            <div className="lg:basis-1/2 basis-full mt-[48px] relative property">
+            <div className="lg:basis-1/2 basis-full mt-[48px] relative property bg-white ">
               <Image
                 src="/property.png"
                 alt="property"
                 width={979}
                 height={560}
-                className="lg:h-[560px] h-auto w-full"
+                className="lg:h-[560px] h-auto w-full border border-white"
               />
               <div className="lg:pt-[22px] pt-[10px] lg:pb-[28px] pb-[10px] lg:pe-[61px] pe-[10px] lg:ps-0 ps-[4px] absolute bottom-0 left-0 bg-white">
                 <h6 className="header-6 text-borderColor">Price</h6>
@@ -232,13 +235,13 @@ const Property = ({ theme1 }) => {
                 </div>
               </div>
             </div>
-            <div className="lg:basis-1/2 basis-full mt-[48px] relative property">
+            <div className="lg:basis-1/2 basis-full mt-[48px] relative property bg-white ">
               <Image
                 src="/property.png"
                 alt="property"
                 width={979}
                 height={560}
-                className="lg:h-[560px] h-auto w-full"
+                className="lg:h-[560px] h-auto w-full border border-white"
               />
               <div className="lg:pt-[22px] pt-[10px] lg:pb-[28px] pb-[10px] lg:pe-[61px] pe-[10px] lg:ps-0 ps-[4px] absolute bottom-0 left-0 bg-white">
                 <h6 className="header-6 text-borderColor">Price</h6>
@@ -296,13 +299,13 @@ const Property = ({ theme1 }) => {
                 </div>
               </div>
             </div>
-            <div className="lg:basis-1/2 basis-full mt-[48px] relative property">
+            <div className="lg:basis-1/2 basis-full mt-[48px] relative property bg-white ">
               <Image
                 src="/property.png"
                 alt="property"
                 width={979}
                 height={560}
-                className="lg:h-[560px] h-auto w-full"
+                className="lg:h-[560px] h-auto w-full border border-white"
               />
               <div className="lg:pt-[22px] pt-[10px] lg:pb-[28px] pb-[10px] lg:pe-[61px] pe-[10px] lg:ps-0 ps-[4px] absolute bottom-0 left-0 bg-white">
                 <h6 className="header-6 text-borderColor">Price</h6>
@@ -360,13 +363,13 @@ const Property = ({ theme1 }) => {
                 </div>
               </div>
             </div>
-            <div className="lg:basis-1/2 basis-full mt-[48px] relative property">
+            <div className="lg:basis-1/2 basis-full mt-[48px] relative property bg-white ">
               <Image
                 src="/property.png"
                 alt="property"
                 width={979}
                 height={560}
-                className="lg:h-[560px] h-auto w-full"
+                className="lg:h-[560px] h-auto w-full border border-white"
               />
               <div className="lg:pt-[22px] pt-[10px] lg:pb-[28px] pb-[10px] lg:pe-[61px] pe-[10px] lg:ps-0 ps-[4px] absolute bottom-0 left-0 bg-white">
                 <h6 className="header-6 text-borderColor">Price</h6>
@@ -387,30 +390,33 @@ const Property = ({ theme1 }) => {
       </Swiper>
 
       <div className="relative container mt-[46px] h-[200px]">
-        <div className="absolute left-2/3 -translate-x-1/2 flex gap-[26px] items-center">
-        {
-            currentSlide === 1? <img
-            src="/arrow1.png"
-            alt="previous arrow"
-            className="w-[71px] h-auto cursor-pointer slide1"
-          /> : <img
-          src="/arrow2.png"
-          alt="next arrow"
-          className="w-[171px] h-auto cursor-pointer slide1 rotate-180"
-        />
-        }
-         {
-            currentSlide === 3? <img
-            src="/arrow1.png"
-            alt="previous arrow"
-            className="w-[71px] h-auto cursor-pointer slide2 rotate-180"
-          /> : <img
-          src="/arrow2.png"
-          alt="next arrow"
-          className="w-[171px] h-auto cursor-pointer slide2 "
-        />
-        }
-      
+        <div className="absolute md:left-2/3 left-0 md:-translate-x-1/2 flex gap-[26px] items-center">
+          {currentSlide === 0 ? (
+            <img
+              src="/arrow1.png"
+              alt="previous arrow"
+              className="w-[71px]  h-auto cursor-pointer slide1"
+            />
+          ) : (
+            <img
+              src="/arrow2.png"
+              alt="next arrow"
+              className="w-[171px]  h-auto cursor-pointer slide1 rotate-180"
+            />
+          )}
+          {currentSlide === 4 ? (
+            <img
+              src="/arrow1.png"
+              alt="previous arrow"
+              className="w-[71px] h-auto cursor-pointer slide2 rotate-180"
+            />
+          ) : (
+            <img
+              src="/arrow2.png"
+              alt="next arrow"
+              className="w-[171px]  h-auto cursor-pointer slide2 "
+            />
+          )}
         </div>
       </div>
     </div>
