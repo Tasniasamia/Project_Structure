@@ -1,5 +1,7 @@
 "use client";
 import About from "../../components/(site)/home4/about";
+import Agents from "../../components/(site)/home4/agents";
+import Blog from "../../components/(site)/home4/blog";
 import Client from "../../components/(site)/home4/client";
 import FeatureLocation from "../../components/(site)/home4/featureLocation";
 import Hero from "../../components/(site)/home4/hero";
@@ -17,6 +19,8 @@ const page = () => {
            <Property/>
            <FeatureLocation/>
            <Client/>
+           <Agents/>
+           <Blog/>
         </div>
     );
 };

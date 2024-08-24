@@ -17,7 +17,7 @@ const Client = () => {
     console.log(currentSlide);
   };
   return (
-    <div className="container lg:mb-[150px] mb-10  z-10 relative">
+    <div className="container lg:mb-[150px] mb-20  z-10 relative">
       <Swiper
         slidesPerView={1}
         spaceBetween={50}
@@ -34,7 +34,7 @@ const Client = () => {
         onSlideChange={handleSlideChange}
       >
         <SwiperSlide>
-          <div className=" grid lg:grid-cols-2 grid-cols-1 lg:gap-[139px] gap-6">
+          <div className=" grid lg:grid-cols-2 grid-cols-1 lg:gap-[139px] gap-6 ">
             <div className="col-span-1 lg:h-fit">
               <h2 className="header-2 ">
                 What our happy clients says about Us
