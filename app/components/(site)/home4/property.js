@@ -389,7 +389,7 @@ isEnd
         </SwiperSlide>
       </Swiper>
 
-      <div className="relative container mt-[46px] h-[200px]">
+      <div className="relative container mt-[46px] ">
         <div className="absolute md:left-2/3 left-0 md:-translate-x-1/2 flex gap-[26px] items-center">
           {currentSlide === 0 ? (
             <img
