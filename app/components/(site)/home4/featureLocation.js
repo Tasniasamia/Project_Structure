@@ -20,13 +20,13 @@ const FeatureLocation = () => {
   return (
     <div className="container mb-[150px]">
     <div className=" grid lg:grid-cols-2  grid-cols-1 gap-[141px] relative">
-      <div className="col-span-1 h-[738px]">
+      <div className="col-span-1 lg:h-[738px]">
         <Image
           src="/feature.png"
           alt="feature"
           width={648}
           height={738}
-          className="w-full object-fill h-full"
+          className="w-full object-fill lg:h-full h-auto"
         />
       </div>
      <div className="col-span-1">
